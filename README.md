@@ -34,7 +34,7 @@ But what if there was a solution that could transform your leftover ingredients 
 
 ### Technical Solution
 
-Create an application for generating recipes based off of the ingredients you have in your pantry/kitchen. Make it easy to input available ingredients as well as provide detailed recipes, including step-by-step instructions and possibly nutritional information. Make it possible to post/save recipes for each user. Additionally, the app could incorporate user-generated content and reviews, allowing for community engagement.
+Create an application for generating recipes (using an AI API) based off of the ingredients you have in your pantry/kitchen. Make it easy to input available ingredients as well as provide detailed recipes, including step-by-step instructions and possibly nutritional information. Make it possible to post/save recipes for each user. Additionally, the app could incorporate user-generated content and reviews, allowing for community engagement.
 
 **Scenario 1: Busy Weeknight Dinner**
 
@@ -177,3 +177,39 @@ Description: Members and admins can leave comments on recipes in the community, 
 Precondition: The user must be logged in as a MEMBER or ADMIN, and the recipe must be one posted in the community.
 
 Post-condition: The comment is added to the recipe's comments section.
+
+
+### Checklist
+
+**As an unauthenticated user, I want to browse and search for recipes, so I can find culinary inspiration without the need to sign in.**
+- [ ] Define and create the "Recipe" database table with fields for recipe name, ingredients, instructions, and user IDs. (30 min)
+
+**As an unauthenticated user, I want to see recipe details, including ingredients and instructions, so I can assess if a recipe suits my preferences and available ingredients.**
+
+**As an authenticated member, I want to create new recipes, so I can share my culinary creations with the Recipe App community.**
+
+**As an authenticated member, I want to save recipes to my personal collection, so I can easily find and revisit recipes I like.**
+
+**As an authenticated member, I want to edit my own recipes, so I can make updates and improvements to my culinary creations.**
+
+**As an authenticated member, I want to delete my own recipes, so I can manage my recipe collection.**
+
+**As an authenticated member, I want to post recipes in the community, so I can share my favorite recipes with others.**
+
+**As an authenticated member, I want to edit my recipes in the community, so I can keep them up to date with any improvements.**
+
+**As an authenticated member, I want to delete my recipes in the community, so I can manage the content I've shared.**
+
+**As an admin, I want to delete recipes posted by other users in the community, so I can moderate and ensure the quality of content.**
+
+**As any user, I want to search for recipes based on dietary preferences, so I can find recipes suitable for my specific dietary requirements.**
+
+**As an authenticated user, I want to comment on recipes in the community, so I can share feedback, tips, or ask questions.**
+
+**As an authenticated user, I want to apply for membership, so I can enjoy the benefits of a registered member and contribute to the community.**
+
+**As an admin, I want to approve or reject membership applications, so I can manage the community's membership effectively.**
+
+**As an admin, I want to have access to a backend administrative UI to manage and review pending recipes and membership applications.**
+
+**As an authenticated member, I want to edit recipes I've posted in the community, even if they were initially approved, to make necessary updates.**

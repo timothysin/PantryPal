@@ -1,0 +1,192 @@
+.container-fluid {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color:antiquewhite;
+    border-radius: 5px;
+    border: solid;
+    border-color: #FFFFFF;
+    width: 75%; /* Set your desired width */
+    min-height: 600px;
+    margin: 0 auto; /* Center horizontally */
+  }
+
+  .list-ingredients {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 84px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    font-family: Oswald; color: white;
+    font-weight: bold;
+  }
+  
+  .container-fluid img {
+    max-width: 1400px;
+    max-height: 510px;
+  }
+  
+  .my-4 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .input-container {
+    display: inline-block;
+    margin: 20px;
+    width: 600px;
+  }
+  
+  /* Style for the text input */
+  input[type="text"] {
+    width: 600px; /* Adjust the width as needed */
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s;
+  }
+  
+  input[type="text"]:focus {
+    border: 2px solid #542f0d; /* Change the border color on focus */
+  }
+
+  .add-button, .remove-button, .save-button, .generate-another, .info-button{
+    padding: 10px 20px;
+    background-color: #542f0d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the button */
+    align-items: center; /* Vertically center the button */
+    height: 100%; /* Ensure the container takes up the full height */
+    text-align: center;
+}
+
+  .submit-button {
+    padding: 10px 20px;
+    background-color: antiquewhite;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .hover-img {
+    display: none;
+  }
+
+  .submit-button:hover .hover-img {
+    display: inline-block;
+  }
+
+  .submit-button:hover .init-img {
+    display: none;
+  }
+
+
+  .col .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recipe-name {
+  font-size: 20px; 
+  font-weight: bold; 
+  color: #333; 
+  text-align: center; 
+  margin-bottom: 10px; 
+}
+  
+  .add-button:hover, .remove-button:hover, .save-button:hover, .generate-another:hover, .info-button:hover {
+    background-color: #311b07;
+  }
+
+  .category-input, .generate-another, .success-message, .fail-message, .save-button{
+    display: block;
+    margin: 0 auto;
+  }
+
+  .success-message, .fail-message {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    width: 25%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    left: 0;
+    font-size: 24px; /* Adjust the font size as needed */
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+  
+  /* Style the message container */
+  .success-message > div {
+    background-color: #4CAF50; /* Background color of the message */
+    padding: 20px; /* Add padding for better readability */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+
+  .recipe {
+    margin-top: 20px;
+    text-align: left;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+}
+
+.loading {
+    text-align: center; /* Center the loading text horizontally */
+    margin-top: 10px; /* Add some top margin to separate it from the button */
+}
+
+.loading-text {
+  font-size: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.dots {
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+  animation: showDots 1s infinite;
+}
+
+@keyframes showDots {
+  0% {
+      width: 0;
+  }
+  33% {
+      width: 1ch;
+  }
+  66% {
+      width: 2ch;
+  }
+}

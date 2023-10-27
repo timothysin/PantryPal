@@ -35,9 +35,9 @@ create table category (
 
 create table recipe (
     recipe_id int primary key auto_increment,
-    `name` varchar(25) not null,
-    ingredients varchar(250) not null,
-    instructions varchar(1000) not null,
+    `name` varchar(250) not null,
+    ingredients varchar(1000) not null,
+    instructions varchar(5000) not null,
     stat varchar(10) not null,
     app_user_id int not null,
     category_id int not null,

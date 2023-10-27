@@ -35,6 +35,13 @@ public class CategoryJdbcTemplateRepository implements CategoryRepository {
     }
 
     @Override
+    public Category findByName(String name) {
+        return jdbcTemplate.query(SELECT + "where `name` = ?;",
+                        new CategoryMapper(), name).stream()
+                .findFirst().orElse(null);
+    }
+
+    @Override
     public Category add(Category category) {
         SimpleJdbcInsert insert = new SimpleJdbcInsert(jdbcTemplate)
                 .withTableName("category")

@@ -9,6 +9,8 @@ public interface CategoryRepository {
 
     Category findById(int categoryId);
 
+    Category findByName(String name);
+
     Category add(Category category);
 
     boolean update(Category category);

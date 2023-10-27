@@ -14,4 +14,54 @@ Content-Type: application/json
 
 POST {{url}}/refresh-token HTTP/1.1
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJwYW50cnktcGFscy1hcGkiLCJzdWIiOiJqb2huQHNtaXRoLmNvbSIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sInVzZXJfaWQiOjEsImV4cCI6MTY5NzgzMTQ1OX0.__-75qC0BnZBZRWJVWfIBdwIzN9H1_dGKqb74A-ZGso
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJwYW50cnktcGFscy1hcGkiLCJzdWIiOiJqb2huQHNtaXRoLmNvbSIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sInVzZXJfaWQiOjEsImV4cCI6MTY5ODI0OTE1MX0.2vvlPyyMMK_XuWNMTtZ7BIwwlA463sSKZul6BhqKNLI
+
+###
+
+POST {{url}}/register HTTP/1.1
+Content-Type: application/json
+
+{
+   "username": "timsin",
+   "password": "password",
+   "confirmPassword": "password"
+}
+
+###
+
+POST {{url}}/recipes HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJwYW50cnktcGFscy1hcGkiLCJzdWIiOiJqb2huQHNtaXRoLmNvbSIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sInVzZXJfaWQiOjEsImV4cCI6MTY5ODI5NTQ3MX0.SdF9WhIueOBq9nYJhF6OpaeuUEwDjHXXRCgkua6cUeo
+
+{
+   "name": "Bacon and Egg Breakfast Toast",
+   "ingredients": "- 4 slices of bread, - 4 eggs, - 8 strips of bacon",
+   "instructions": "1. Preheat your oven to 375°F (190°C)., 2. Place the bacon strips in a large frying pan over medium heat. Cook until the bacon becomes crispy and slightly browned, usually around 6-8 minutes. Set the cooked bacon aside on a plate lined with paper towels to absorb excess grease., 3. Remove most of the bacon grease from the pan, leaving just a small amount to coat the pan., 4. Using a round cookie cutter or any similar object, cut a circle in the center of each slice of bread., 5. Place the bread slices in the same frying pan with the small amount of bacon grease. Cook one side of the bread until it turns golden brown. Flip the bread slices and toast the other side. Once both sides are nicely toasted, remove them from the pan., 6. Using the same frying pan, crack one egg into each of the bread holes. Allow the eggs to cook over medium heat until the desired level of doneness is reached. If you prefer fully cooked eggs, cover the pan with a lid for a minute or so., 7. While the eggs are cooking, chop the cooked bacon into small pieces., 8. Once the eggs are cooked, carefully remove each egg-in-toast from the pan and place them on a serving plate., 9. Sprinkle the chopped bacon on top of each egg-in-toast., 10. Serve your delicious Bacon and Egg Breakfast Toast immediately, with salt and pepper for seasoning if desired., Enjoy your delightful breakfast creation!",
+   "stat": "saved",
+   "category_id": 1
+}
+
+###
+
+GET {{url}}/category/breakfast HTTP/1.1
+Content-Type: application/json
+
+###
+
+GET {{url}}/category/ HTTP/1.1
+Content-Type: application/json
+
+###
+
+POST {{url}}/category HTTP/1.1
+Content-Type: application/json
+
+{
+   "name": "Skillet"
+}
+
+###
+POST {{url}}/recipes/saved HTTP/1.1
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJwYW50cnktcGFscy1hcGkiLCJzdWIiOiJqb2huQHNtaXRoLmNvbSIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sInVzZXJfaWQiOjEsImV4cCI6MTY5ODMwNzAxOX0.qiGhAm2KEA3Oh04_WNirH0jwB2UKL3vG0OVkeEdX59E

@@ -25,9 +25,18 @@ public class CategoryController {
         return service.findAll();
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Category> findById(@PathVariable int id) {
-        Category category = service.findById(id);
+//    @GetMapping("/{id}")
+//    public ResponseEntity<Category> findById(@PathVariable int id) {
+//        Category category = service.findById(id);
+//        if (category == null) {
+//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//        }
+//        return new ResponseEntity<>(category, HttpStatus.OK);
+//    }
+
+    @GetMapping("/{name}")
+    public ResponseEntity<Category> findByName(@PathVariable String name) {
+        Category category = service.findByName(name);
         if (category == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }

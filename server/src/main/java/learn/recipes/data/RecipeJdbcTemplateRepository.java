@@ -30,6 +30,12 @@ public class RecipeJdbcTemplateRepository implements RecipeRepository{
     }
 
     @Override
+    public List<Recipe> findUsersRecipes(int userId) {
+        String sql = SELECT + "where app_user_id = ?;";
+        return jdbcTemplate.query(sql, new RecipeMapper(), userId);
+    }
+
+    @Override
     @Transactional
     public Recipe findById(int id) {
         String sql = SELECT + "where recipe_id = ?;";

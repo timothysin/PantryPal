@@ -29,6 +29,12 @@ public class RecipeServiceTest {
         );
         when(recipeRepository.findAll()).thenReturn(recipes);
 
+        List<Recipe> recipesUser1 = List.of(
+                new Recipe(1, "Recipe1", "Ingredients1", "Instructions1", "saved", 1, 1),
+                new Recipe(2, "Recipe2", "Ingredients2", "Instructions2", "posted", 1, 2)
+        );
+        when(recipeRepository.findUsersRecipes(1)).thenReturn(recipesUser1);
+
         List<Recipe> recipesByName = List.of(
                 new Recipe(1, "Recipe1", "Ingredients1", "Instructions1", "saved", 1, 1),
                 new Recipe(3, "Recipe1", "Ingredients3", "Instructions3", "saved", 3, 1)
@@ -50,6 +56,15 @@ public class RecipeServiceTest {
     @Test
     public void testFindAllRecipes() {
         List<Recipe> result = recipeService.findAll();
+
+        assertEquals(2, result.size());
+        assertEquals("Recipe1", result.get(0).getName());
+        assertEquals("Recipe2", result.get(1).getName());
+    }
+
+    @Test
+    public void testFindUser1Recipes() {
+        List<Recipe> result = recipeService.findUsersRecipes(1);
 
         assertEquals(2, result.size());
         assertEquals("Recipe1", result.get(0).getName());

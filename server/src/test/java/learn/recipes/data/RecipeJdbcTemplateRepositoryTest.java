@@ -35,6 +35,13 @@ public class RecipeJdbcTemplateRepositoryTest {
     }
 
     @Test
+    void shouldFindUser1Recipes() {
+        List<Recipe> expected = List.of(makeRecipe(1), makeRecipe(2), makeRecipe(3));
+        List<Recipe> actual = repository.findUsersRecipes(1);
+        assertEquals(expected, actual);
+    }
+
+    @Test
     void shouldFindById_2() {
         Recipe expected = makeRecipe(2);
         Recipe actual = repository.findById(2);

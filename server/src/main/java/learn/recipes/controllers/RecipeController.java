@@ -27,6 +27,13 @@ public class RecipeController {
         return service.findByName(title);
     }
 
+    @PostMapping("/saved")
+    public List<Recipe> findUsersRecipes(@AuthenticationPrincipal AppUser appUser) {
+        System.out.println("hi");
+        System.out.println(appUser);
+        return service.findUsersRecipes(appUser.getId());
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<Recipe> findById(@PathVariable int id) {
         Recipe rp = service.findById(id);

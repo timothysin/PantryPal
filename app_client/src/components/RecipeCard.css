@@ -1,0 +1,15 @@
+.recipe-name {
+    margin-left: 50px;
+}
+
+.info-button {
+    margin-right: 30px; /* Adjust the value as needed to shift the button to the left */
+}
+
+.recipe-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }

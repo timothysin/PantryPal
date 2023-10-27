@@ -32,6 +32,8 @@ public class RecipeService {
         return repository.findById(recipeId);
     }
 
+    public List<Recipe> findUsersRecipes(int userId) { return repository.findUsersRecipes(userId);}
+
     public Result<Recipe> add(Recipe recipe) {
 
         Result<Recipe> result = validate(recipe);
@@ -100,9 +102,10 @@ public class RecipeService {
             result.addMessage("recipe instructions cannot be blank");
         }
 
-        if (recipe.getStat() != "saved" && recipe.getStat() != "posted") {
-            result.addMessage("Status must be saved or posted");
-        }
+//        if (recipe.getStat() != "saved" && recipe.getStat() != "posted") {
+//            result.addMessage("Status must be saved or posted");
+//            result.addMessage(recipe.getStat());
+//        }
 
         if (recipe.getCategory_id() < 0) {
             result.addMessage("category must exist");

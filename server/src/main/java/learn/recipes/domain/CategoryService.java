@@ -22,6 +22,8 @@ public class CategoryService {
         return repository.findById(categoryId);
     }
 
+    public Category findByName(String name) { return repository.findByName(name); }
+
     public Result<Category> add(Category category) {
         Result<Category> result = validate(category);
         if (!result.isSuccess()) {

@@ -1,0 +1,75 @@
+.signup-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .alert {
+    width: 100%;
+  }
+  
+  .form-group {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-actions {
+    margin-top: 10px;
+    text-align: right;
+    display: flex;
+    justify-content: center; 
+    margin-top: 10px; 
+  }
+  
+  .btn {
+    margin-right: 10px;
+  }
+  
+  .btn-secondary {
+    padding: 10px 20px;
+    background-color: #542f0d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+  }
+  
+  .btn-primary {
+    padding: 10px 20px;
+    background-color: #542f0d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .btn-secondary:hover, .btn-primary:hover {
+    background-color: #311b07;
+  }

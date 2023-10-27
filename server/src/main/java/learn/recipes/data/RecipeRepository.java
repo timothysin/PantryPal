@@ -7,6 +7,8 @@ import java.util.List;
 public interface RecipeRepository {
     List<Recipe> findAll();
 
+    List<Recipe> findUsersRecipes(int userId);
+
     Recipe findById(int id);
 
     List<Recipe> findByName(String name);
